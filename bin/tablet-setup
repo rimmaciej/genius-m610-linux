@@ -1,0 +1,13 @@
+#!/bin/sh
+
+sleep 1
+
+xinput set-prop "Genius EasyPen M610X Pen (0)" --type=float "Coordinate Transformation Matrix" 2 0 -0.5 0 1.4 -0.25 0 0 1
+
+if [ $? -eq 0 ]; then
+	logger -t TABLET "Tablet connected"
+	notify-send "Tablet" "Tablet configured" -i input-tablet
+else
+	logger -t TABLET "Fail"
+    notify-send "Tablet" "Tablet disconnected or not initialized" -i error
+fi
