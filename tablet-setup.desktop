@@ -1,5 +1,5 @@
 [Desktop Entry]
 Type=Application
-Name=Tablet config
+Name=Tablet setup
 Icon=input-tablet
-Exec=tablet_conf
+Exec=tablet-setup
